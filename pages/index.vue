@@ -1,26 +1,38 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">az_archicard</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="my-4 px-4 md:px-0 container mx-auto text-black">
+    <div class="flex justify-between">
+      <div class="text-xs text-gray-400">
+        Авторизованный учебный центр GRAPHISOFT Россия
       </div>
+      <a
+        href="#"
+        class="py-2 px-4 text-center font-bold border border-primary hover:bg-primary"
+        >Заказать консультацию</a
+      >
+    </div>
+    <div class="mt-48">
+      <div>
+        <h1 class="text-5xl font-bold leading-none">Archicad от А до Я</h1>
+        <p class="text-4xl leading-none">доступно и живо</p>
+        <p class="mt-4 text-lg">
+          онлайн-курс по мастерству Archicad 24 от базовых инструментов до
+          интеллигентных BIM-решений
+        </p>
+        <ul>
+          <li>Мгновенный доступ к 22 урокам</li>
+          <li>Практические задания после каждого урока</li>
+          <li>Поддержка ментора</li>
+          <li>Полезные знакомства – доступ в чаты курса и выпускников</li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+    <div class="mt-4">
+      <button
+        class="py-2 px-4 text-2xl font-bold bg-primary hover:bg-primary-light"
+      >
+        Начать учиться
+      </button>
     </div>
   </div>
 </template>
@@ -28,41 +40,3 @@
 <script>
 export default {}
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
