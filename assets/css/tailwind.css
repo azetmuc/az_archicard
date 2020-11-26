@@ -36,3 +36,14 @@ html {
 .bg-brush {
   background: url(/elements/brush.svg) no-repeat 50% 50%;
 }
+
+.quote::before {
+  content: ' ';
+  display: block;
+  height: 20px;
+  background: url(/elements/quote-open.svg) no-repeat 0 0;
+}
+
+.quote {
+  background: url(/elements/quote-close.svg) no-repeat 100% 100%;
+}

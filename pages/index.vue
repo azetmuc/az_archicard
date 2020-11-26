@@ -84,6 +84,37 @@
       <h2 class="bg-brush text-4xl font-bold text-center my-4 py-4">
         Мнения студентов
       </h2>
+      <div class="mt-8">
+        <div class="md:mx-16 flex justify-between">
+          <a href="#" title="Предыдущий отзыв">
+            <TSvg name="prev" />
+          </a>
+          <a href="#" title="Следующий отзыв">
+            <TSvg name="next" />
+          </a>
+        </div>
+        <div class="md:mx-32 md:-mt-16 shadow-xl p-4">
+          <blockquote class="quote p-4">
+            Добрый день! Я закончила базовый курс - Основы Archicad "Создание
+            коммерческих проектов в Archicad". Очень понравился мне этот курс.
+            Благодаря этому курсу, мне действительно удалось хорошо освоить
+            программу Archicad, до это у меня были лишь только поверхностные
+            знания. Отельная благодарность куратору Алексею Зиновьеву за его
+            позитивную поддержку и оперативные ответы на мои вопросы. Обучением
+            я осталась довольна. Большое Спасибо Вам!!!
+          </blockquote>
+          <div class="ml-4 flex items-center">
+            <div class="w-12">
+              <img
+                src="/reviews/tarasova.jpg"
+                alt="Мария Тарасова"
+                class="rounded-full w-12 h-12"
+              />
+            </div>
+            <div class="font-bold ml-2">Мария Тарасова</div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="mt-12">
       <h2 class="bg-brush text-4xl font-bold text-center my-4 py-4">
