@@ -47,18 +47,36 @@
       <h2 class="bg-brush text-4xl font-bold text-center my-4 py-4">
         22 урока
       </h2>
-      <div class="flex justify-between">
-        <div class="bg-gray-700 h-full w-full">video</div>
-        <div class="w-1/4">
-          <a href="#" class="flex justify-between bg-primary p-4">
+      <div class="md:flex justify-between border">
+        <div class="w-full">
+          <div class="aspect-ratio">
+            <iframe
+              src="https://player.vimeo.com/video/238717446?title=0&byline=0&portrait=0"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="md:w-1/4">
+          <div
+            v-for="(item, index) in lessons"
+            :key="index"
+            class="flex justify-between p-4 hover:bg-primary-light border-b cursor-pointer"
+            :class="{ 'bg-primary': index === activeLesson }"
+            @click="activeLesson = index"
+          >
             <div>
-              <div class="text-sm font-bold">1. Описание курса</div>
-              <div class="text-white text-xs">3 мин</div>
+              <div class="text-sm font-bold leading-tight">
+                {{ index + 1 }}. {{ item.name }}
+              </div>
+              <div class="text-gray-600 text-xs">{{ item.duration }} мин</div>
             </div>
             <div class="w-4">
-              <input type="checkbox" />
+              <TSvg v-if="item.locked" name="lock" />
+              <TSvg v-else name="unchecked" />
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -79,6 +97,70 @@
     </section>
     <section class="mt-12">
       <h2 class="bg-brush text-4xl font-bold text-center my-4 py-4">Тарифы</h2>
+      <div class="md:mt-40 md:mx-32 p-4 shadow-xl md:flex">
+        <div class="p-6">
+          <div class="text-4xl font-bold leading-tight">8 тыс. руб.</div>
+          <div class="text-2xl font-bold">Самостоятельный</div>
+          <ul class="pl-4 list-excluded text-gray-400 p-4 pb-0">
+            <li>Поддержка ментора</li>
+            <li>Проверка отчетов ментором</li>
+          </ul>
+          <ul class="pl-4 list-check p-4 pt-0">
+            <li>Проверка финального задания ментором</li>
+            <li>Доступ к курсу 2 месяца</li>
+          </ul>
+          <div class="flex justify-center">
+            <button
+              class="bg-primary hover:bg-primary-light border border-primary font-bold p-2"
+            >
+              Выбрать
+            </button>
+          </div>
+        </div>
+        <div class="border border-primary p-6 shadow-xl md:-mt-32">
+          <div
+            class="bg-primary text-xs uppercase p-2 text-center -mx-6 -mt-6 mb-4"
+          >
+            Рекомендуемый
+          </div>
+          <div class="text-4xl font-bold leading-tight">14 тыс. руб.</div>
+          <div class="text-2xl font-bold">Оптимальный</div>
+          <ul class="pl-6 list-check p-4">
+            <li>Поддержка ментора 3 месяца</li>
+            <li>Проверка отчетов ментором</li>
+            <li>Проверка финального задания ментором</li>
+            <li>Доступ к курсу неограниченный</li>
+          </ul>
+          <div class="flex justify-center">
+            <button
+              class="bg-primary hover:bg-primary-light border border-primary font-bold p-2"
+            >
+              Выбрать
+            </button>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl font-bold leading-tight">20 тыс. руб.</div>
+          <div class="text-2xl font-bold">Углубленный</div>
+          <ul class="pl-4 list-check p-4 pb-0">
+            <li>Поддержки ментора 4 месяца</li>
+            <li>Проверка отчетов ментором</li>
+            <li>Проверка финального задания ментором</li>
+            <li>Доступ к курсу неограниченный</li>
+          </ul>
+          <ul class="pl-4 list-star p-4 pt-0">
+            <li class="font-bold">Две часовые онлайн-поддержки в месяц</li>
+            <li class="font-bold">Разбор финального задания</li>
+          </ul>
+          <div class="flex justify-center">
+            <button
+              class="bg-primary hover:bg-primary-light border border-primary font-bold p-2"
+            >
+              Выбрать
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="mt-12">
       <h2 class="bg-brush text-4xl font-bold text-center my-4 py-4">
@@ -192,7 +274,7 @@
           />
           <button
             type="submit"
-            class="bg-primary border border-primary font-bold p-2"
+            class="bg-primary hover:bg-primary-light border border-primary font-bold p-2"
           >
             Подписаться
           </button>
@@ -205,6 +287,37 @@
 <script>
 export default {
   data: () => ({
+    activeLesson: 0,
+    lessons: [
+      {
+        name: 'Описание курса',
+        duration: 3,
+      },
+      {
+        name: 'Возможности программы',
+        duration: 7,
+      },
+      {
+        name: 'Запуск Archicad',
+        duration: 9,
+        locked: true,
+      },
+      {
+        name: 'Знакомство с интерфейсом программы',
+        duration: 27,
+        locked: true,
+      },
+      {
+        name: 'Первые шаги. Основы построения',
+        duration: 17,
+        locked: true,
+      },
+      {
+        name: 'Настройки инструментов',
+        duration: 23,
+        locked: true,
+      },
+    ],
     faq: [
       {
         question: 'Что такое Archicad?',

@@ -28,7 +28,19 @@ html {
 @tailwind utilities;
 
 .list-star li {
-  background: url(/elements/list-star.svg) no-repeat 0 50%;
+  background: url(/elements/list-star.svg) no-repeat 0 2px;
+  padding-left: 26px;
+  margin-left: -26px;
+}
+
+.list-check li {
+  background: url(/elements/list-check.svg) no-repeat 0 2px;
+  padding-left: 26px;
+  margin-left: -26px;
+}
+
+.list-excluded li {
+  background: url(/elements/list-excluded.svg) no-repeat 0 4px;
   padding-left: 26px;
   margin-left: -26px;
 }
