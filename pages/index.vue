@@ -9,7 +9,7 @@
           <div>Авторизованный учебный центр GRAPHISOFT Россия</div>
         </div>
         <a
-          href="#"
+          href="https://calendly.com/az-studio/support30min"
           class="py-2 px-4 text-center font-bold border border-primary hover:bg-primary-light"
           >Заказать консультацию</a
         >
