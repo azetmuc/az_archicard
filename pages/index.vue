@@ -290,52 +290,52 @@ export default {
     activeLesson: 0,
     lessons: [
       {
-        name: 'Описание курса',
+        name: "Описание курса",
         duration: 3,
       },
       {
-        name: 'Возможности программы',
+        name: "Возможности программы",
         duration: 7,
       },
       {
-        name: 'Запуск Archicad',
+        name: "Запуск Archicad",
         duration: 9,
         locked: true,
       },
       {
-        name: 'Знакомство с интерфейсом программы',
+        name: "Знакомство с интерфейсом программы",
         duration: 27,
         locked: true,
       },
       {
-        name: 'Первые шаги. Основы построения',
+        name: "Первые шаги. Основы построения",
         duration: 17,
         locked: true,
       },
       {
-        name: 'Настройки инструментов',
+        name: "Настройки инструментов",
         duration: 23,
         locked: true,
       },
     ],
     faq: [
       {
-        question: 'Что такое Archicad?',
-        answer: '',
+        question: "Что такое Archicad?",
+        answer: "",
       },
       {
-        question: 'Чем Archicad лучше других программ?',
-        answer: '',
+        question: "Чем Archicad лучше других программ?",
+        answer: "",
       },
       {
-        question: 'На кого рассчитан этот курс?',
-        answer: '',
+        question: "На кого рассчитан этот курс?",
+        answer: "",
       },
       {
-        question: 'Чем этот курс лучше бесплатных YouTube видео?',
-        answer: '',
+        question: "Чем этот курс лучше бесплатных YouTube видео?",
+        answer: "",
       },
     ],
   }),
-}
+};
 </script>
