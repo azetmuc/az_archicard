@@ -1,51 +1,51 @@
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
-
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1Ic4eVFTrBbkHWRl88troC0E"
-  role="link"
-  type="button"
->
-  Checkout
-</button>
-
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51IUWRPFTrBbkHWRlw23fHFlzUhk0IpcNuoAhRo2yBd0uIYNRWMLt2rfw7qACc5g8gjTXlGzAfWEaRGZEVOlrADju00PgjdhJcU');
-
-  var checkoutButton = document.getElementById('checkout-button-price_1Ic4eVFTrBbkHWRl88troC0E');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1Ic4eVFTrBbkHWRl88troC0E', quantity: 1}],
-      mode: 'payment',
+  <!-- Load Stripe.js on your website. -->
+  <script src="https://js.stripe.com/v3"></script>
+  
+  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+  <button
+    style="background-color:#fece6c;color:#b5562b;padding:10px;border:2px;border-radius:3px;font-weight: 400; height:36px"
+    id="checkout-button-price_1IbmzgFTrBbkHWRlG8GYDHQY"
+    role="link"
+    type="button"
+  >
+    Получить доступ к вебинару
+  </button>
+  
+  <div id="error-message"></div>
+  
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_51IUWRPFTrBbkHWRlw23fHFlzUhk0IpcNuoAhRo2yBd0uIYNRWMLt2rfw7qACc5g8gjTXlGzAfWEaRGZEVOlrADju00PgjdhJcU');
+  
+    var checkoutButton = document.getElementById('checkout-button-price_1IbmzgFTrBbkHWRlG8GYDHQY');
+    checkoutButton.addEventListener('click', function () {
       /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       * When the customer clicks on the button, redirect
+       * them to Checkout.
        */
-      successUrl: window.location.protocol + '//az-studio.de/success',
-      cancelUrl: window.location.protocol + '//az-studio.de/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
+      stripe.redirectToCheckout({
+        lineItems: [{price: 'price_1IbmzgFTrBbkHWRlG8GYDHQY', quantity: 1}],
+        mode: 'payment',
         /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
+         * Do not rely on the redirect to the successUrl for fulfilling
+         * purchases, customers may not always reach the success_url after
+         * a successful payment.
+         * Instead use one of the strategies described in
+         * https://stripe.com/docs/payments/checkout/fulfill-orders
          */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
+        successUrl: window.location.protocol + '//az-studio.de/success',
+        cancelUrl: window.location.protocol + '//az-studio.de/canceled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          /*
+           * If `redirectToCheckout` fails due to a browser or network
+           * error, display the localized error message to your customer.
+           */
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
     });
-  });
-})();
-</script>
+  })();
+  </script>
