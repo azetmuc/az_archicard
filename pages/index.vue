@@ -20,7 +20,7 @@
         </div>
         <div class="md:w-1/2">
           <h1 class="text-4xl md:text-5xl font-bold leading-none mt-4 md:mt-0">
-            Archicad от А до Я
+            Archicad от A до Z
           </h1>
           <p class="text-4xl leading-none">доступно и живо</p>
           <p class="mt-4 text-lg">
@@ -28,9 +28,9 @@
             интеллигентных BIM-решений
           </p>
           <ul class="list-star pl-6 mt-2">
-            <li>Мгновенный доступ к 22 урокам</li>
+            <li>Мгновенный доступ к 22 урокам после старта продаж</li>
             <li>Практические задания после каждого урока</li>
-            <li>Поддержка ментора</li>
+            <li>Поддержка менторов</li>
             <li>Полезные знакомства – доступ в чаты курса и выпускников</li>
           </ul>
         </div>
