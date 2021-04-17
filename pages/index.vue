@@ -16,7 +16,7 @@
       </div>
       <div class="mt-4 md:mt-48 md:flex justify-between flex-row-reverse">
         <div class="ml-0 md:ml-4">
-          <img src="/cover.jpg" alt="3д модель из Archicad" />
+          <img src="/cover.jpg" width="800px" alt="3д модель из Archicad" />
         </div>
         <div class="md:w-1/2">
           <h1 class="text-4xl md:text-5xl font-bold leading-none mt-4 md:mt-0">
