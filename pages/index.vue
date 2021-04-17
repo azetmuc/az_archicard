@@ -45,7 +45,7 @@
     </section>
     <section class="mt-12">
       <h2 class="bg-brush text-4xl font-bold text-center my-4 py-4">
-        22 урока
+        33 урока
       </h2>
       <div class="md:flex justify-between border">
         <div class="w-full">
@@ -290,30 +290,31 @@ export default {
     activeLesson: 0,
     lessons: [
       {
-        name: "Описание курса",
+        name: "Введение в интерфейс. Первые настройки",
         duration: 3,
       },
       {
-        name: "Возможности программы",
+        name: "Основы работы с инструментами. Часть 1",
         duration: 7,
+        locked: true,
       },
       {
-        name: "Запуск Archicad",
+        name: "Основы работы с инструментами. Часть 2",
         duration: 9,
         locked: true,
       },
       {
-        name: "Знакомство с интерфейсом программы",
+        name: "Основы работы с инструментами. Часть 3",
         duration: 27,
         locked: true,
       },
       {
-        name: "Первые шаги. Основы построения",
+        name: "Инструмент Стена",
         duration: 17,
         locked: true,
       },
       {
-        name: "Настройки инструментов",
+        name: "Инструменты Перекрытие и Крыша",
         duration: 23,
         locked: true,
       },
